@@ -1,0 +1,17 @@
+h1{font-family: Brush Script MT;
+	font-size: 40px;
+	background-color: pink;}
+h3{font-family: Brush Script MT;
+	color: pink;}
+ul{font-family: helvetica;}
+ol{font-family: verdana;}
+p{font-family: courier new;}
+.container{color: darkblue;
+		font-size: 18px;
+		letter-spacing: 15px;
+		text-transform: capitalize;}
+#optional{background-color: yellow; 
+		text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;}
+html{text-align: center;
+	justify-content: center;
+	background-color: lightblue;}
