@@ -1,0 +1,113 @@
+body{
+	margin: 50px;
+	padding: 40px;
+}
+h1{
+	font-family: helvetica;
+	color:pink;
+}
+
+h2{
+	font-family: helvetica;
+	color:pink;
+}
+
+p{
+	font-family: helvetica;
+	color:pink;
+}
+
+@media screen and (min-width: 768px) {
+  h1{
+    font-family: monospace;
+    font-size: 32px;
+    color: orange;
+  }
+  h2{
+  	font-family: monospace;
+  	font-size: 28px;
+  	color: powderblue;
+  }
+  p{
+   	font-family: monospace;
+  	font-size: 28px;
+  	color: pink; 	
+  }
+  body{
+  	margin: 60px;
+  	padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1{
+    font-family: monospace;
+    font-size: 40px;
+    color: olive;
+  }
+  h2{
+  	font-family: monospace;
+  	font-size: 34px;
+  	color: orange;
+  }
+  p{
+   	font-family: monospace;
+  	font-size: 30px;
+  	color: hotpink;
+  	line-height: 60px; 	
+  }
+  body{
+  	margin: 60px;
+  	padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1{
+    font-family: brush script MT;
+    font-size: 70px;
+    color: lavender;
+  }
+  h2{
+  	font-family: helvetica;
+  	font-size: 35px;
+  	color: powderblue;
+  }
+  p{
+   	font-family: times new roman;
+  	font-size: 45px;
+  	color: pink;
+  	line-height: 90px; 	
+  }
+  body{
+  	margin: 70px;
+  	padding: 50px;
+  	background-color: black
+  }
+}
+}
+
+@media screen and (max-width: 480px) {
+  h1{
+    font-family: brush script MT;
+    font-size: 90px;
+    color: purple;
+  }
+  h2{
+  	font-family: helvetica;
+  	font-size: 35px;
+  	color: yellow;
+  }
+  p{
+   	font-family: helvetica;
+  	font-size: 25px;
+  	color: hotpink;
+  	line-height: 80px; 	
+  }
+  body{
+  	margin: 100px;
+  	padding: 80px;
+  	background-color: black
+  }
+}
+}
