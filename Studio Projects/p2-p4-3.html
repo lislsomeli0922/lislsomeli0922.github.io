@@ -24,6 +24,38 @@
 			 transform:scale(3);
 			 transition: all 10s linear;
 		}
+				@keyframes bgcolor {
+    		0% {
+        		background-color: white
+   			}
+
+   			30% {
+        		background-color: lightyellow
+   			}
+
+   			50% {
+        		background-color: gold
+    		}
+
+    		60% {
+       			 background-color: skyblue
+    		}
+
+    		80% {
+        		background-color: teal
+    		}
+
+    		100% {
+        		background-color: #78AB46
+    		}
+		}
+
+		body {
+    		-webkit-animation: bgcolor 45s infinite;
+    		animation: bgcolor 40s infinite;
+    		-webkit-animation-direction: linear;
+    		animation-direction: alternate;
+		}
 	</style>
 </head>
 
