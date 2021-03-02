@@ -22,7 +22,7 @@
 			 font-family: helvetica;
 			 font-weight: bolder;
 			 transform:scale(3);
-			 transition: all 0.2s linear;
+			 transition: all 0.5s linear;
 		}
 		body{
  			background-image: linear-gradient(white, #78AB46, #278a4e);
@@ -71,6 +71,6 @@
 			 font-family: helvetica;
 			 font-weight: bolder;
 			 transform:scale(3);
-			 transition: all 0.2s linear;
+			 transition: all 0.5s linear;
 			}
 		}
