@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Calender</title>
+	<style>
+	body{
+		background-color: #875c1f;
+	}
+	.column-layout {
+	    display: flex;
+	    max-width: 1000px;
+	    background-color: #f5f245;
+	    padding: 20px 50px;
+	    margin: 40px auto;
+	    border-radius: 1em;
+    }
+    .title {
+	    flex: 2; 
+	    background-color: #fcba03;
+	    padding: 0 10px;
+	    order: 2;
+	    border-radius: 1em;
+	}
+	h1{
+		text-align: center;
+		color: white;
+		font-family: helvetica;
+		font-weight: lighter;
+		font-size: 50px;
+	}
+	p{
+		text-align: center;
+		color: white;
+		font-family: helvetica;
+		font-weight: lighter;
+		font-size: 20px;
+	}
+	.fixed-size-container {
+	    display: flex;
+	    margin: 40px auto 0 auto;
+	    background-color: #fcba03;
+	    align-items: center;
+	    justify-content: space-around;
+	    flex-wrap: wrap;
+	    border-radius: 1em;    
+    }
+    .fixed-size {
+	    display: flex;
+	    margin: 15px 0;
+	    width: 150px;
+	    height: 50px;
+	    background-color: #f5f245;
+	    text-align: center;
+	    font-size: 25px; 
+	    align-items: center;
+	    justify-content: center;
+	    box-sizing: border-box;
+	    border-radius: 1em;
+	    color: white;
+	    font-family: helvetica;
+	    font-weight: lighter;
+    }
+	@media (max-width: 900px) {
+   		.fixed-size {  margin-bottom: 30px; }   
+    }
+	.grid {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
+	}
+
+	.unit {
+	    width: 12%;
+	    height: 100px;
+	    background-color: #d4660d;
+	    margin: 10px;
+	    border-radius: 1em;
+	}
+	.number {
+	  font-family: helvetica;
+	  font-weight: lighter;
+	  font-size: 20pt;
+	  color: white;
+	  width: 22%;
+	  background-color: none;
+	  height: 20px;
+	  text-align: center;
+	}
+	.content{
+		text-align: center;
+	}
+	.link{
+		text-align: center;
+		padding-top: 8px;
+		font-size: 20px;
+		font-family: helvetica;
+		color: #f5f245;
+	}
+	.holiday{
+		text-align: center;
+		padding: 14px; 
+		font-size: 20px;
+		font-family: helvetica;
+		color: #f5f245;
+	}
+
+	</style>
+</head>
+
+<body>
+	<div class="column-layout">
+  		<div class="title">
+    	<h1>september 2021</h1>
+    	<p>hispanic heritage month</p>
+  		</div>
+  	</div>
+  	<div class="fixed-size-container">
+	    <div class="fixed-size">Sunday</div>
+	    <div class="fixed-size">Monday</div>
+	    <div class="fixed-size">Tuesday</div>
+	    <div class="fixed-size">Wednesday</div>
+	    <div class="fixed-size">Thursday</div>
+	    <div class="fixed-size">Friday</div>
+	    <div class="fixed-size">Saturday</div>
+    </div>
+  	<div class="grid">
+	    <div class="unit"></div>
+	    <div class="unit"></div>
+	    <div class="unit"></div>
+	    <div class="unit">
+	    	<div class="number">
+	    		1
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		2
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		3
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		4
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		5
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		6
+	    	</div>
+	    	<div class="holiday">
+	    		Labor Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		7
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		8
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		9
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		10
+	    	</div>
+	    	<div class="holiday">
+	    		Suicide Prevention Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		11
+	    	</div>
+	    	<div class="holiday">
+	    		September 11
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		12
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		13
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		14
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		15
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		16
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		17
+	    	</div>
+	    	<div class="holiday">
+	    		Citizenship Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		18
+	    	</div>
+	    	<div class="holiday">
+	    		AIDS Awareness Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		19
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		20
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		21
+	    	</div>
+	    	<div class="link">
+	    		<a href="https://youtu.be/Gs069dndIYk">Do you remember?</a>
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		22
+	    	</div>
+	    	<div class="holiday">
+	    		First Day of Fall
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		23
+	    	</div>
+	    	<div class="holiday">
+	    		Bi Visibility Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		24
+	    	</div>
+	    	<div class="holiday">
+	    		Native American Day
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		25
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		26
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		27
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	   	<div class="unit">
+	   		<div class="number">
+	    		28
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	   	</div>
+	    <div class="unit">
+	    	<div class="number">
+	    		29
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit">
+	    	<div class="number">
+	    		30
+	    	</div>
+	    	<div class="content">
+	    		<img src="https://i.pinimg.com/originals/37/4e/0f/374e0fd5c93d0e55f3f38f2e746ccf5d.png" width="60px">
+	    	</div>
+	    </div>
+	    <div class="unit"></div>
+	    <div class="unit"></div>
+	</div>
+</body>
+</html>
