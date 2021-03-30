@@ -66,7 +66,7 @@ p{
 }
 
 .unit {
-	width: 30%;
+	width: 150px;
 	height: 100px;
 	background-color: #d4660d;
 	margin: 10px;
@@ -111,5 +111,11 @@ ol{
 	p{
 		font-size: 20px;
 	}
+	.container{
 
+		align-items: row;
+	}
+	.unit{
+		width: 300px;
+	}
 }
