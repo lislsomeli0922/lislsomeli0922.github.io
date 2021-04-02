@@ -214,4 +214,8 @@ ol{
 	.button{
 		transform: translate(400%, -600%);
 	}
+	.topic{
+		font-size: 30px;
+		margin-top: 10px;
+	}
 }
