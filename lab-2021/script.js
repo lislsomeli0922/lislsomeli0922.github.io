@@ -8,7 +8,11 @@ function myFunction() {
 		document.getElementById("demo").innerHTML = txt;
 	}
 
-function myFunctionTwo() {
-  		var popup = document.getElementById("myPopup");
-  		popup.classList.toggle("show");
-	}
+let popupbutton = document.querySelector(".popup");
+popupbutton.addEventListener("click", myFunctionTwo);
+function myFunctionTwo(){
+	var popup = document.getElementById("myPopup");
+  	popup.classList.toggle("show");
+}
+
+
