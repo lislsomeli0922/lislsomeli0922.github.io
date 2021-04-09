@@ -56,6 +56,7 @@ function setTable(allItems) {
     let imageUrl = item.fields.attachments[0].url;
 
 
+
     // let itemImage = document.createElement('img');
     // itemImage.src = imageUrl;
     // itemImage.classList.add(item.fields.kind_of_item);
@@ -66,51 +67,105 @@ function setTable(allItems) {
     // so if the item is a Cup, I want to add a class name of cup, and put each one in a different position on the page.
     // dont forget, some of the styling for my page here in JS and some is in my CSS file, for example I know that my .cup class has position: absolute set in CSS, which means that style.left and style.top will work here in the JS.
     
-    // if (name === "Cup") {
-    //   for (var i=0; i<3; i++) {
-    //     let cup = document.createElement('img');
-    //     cup.src = imageUrl;
-    //     cup.classList.add("cup");
+    if (name === "cup") {
+      for (var i=0; i<3; i++) {
+        let cup = document.createElement('img');
+        cup.src = imageUrl;
+        cup.classList.add("cup");
 
-    //     if (i === 0) {
-    //       cup.style.left = "80%";
-    //     }
-    //     if (i === 1) {
-    //       cup.style.left = "80%";
-    //       cup.style.top = "60%";
-    //     }
-    //     if (i === 2) {
-    //       cup.style.left = "10%";
-    //       cup.style.top = "10%";
-    //     }
+        if (i === 0) {
+          cup.style.left = "72%";
+        }
+        if (i === 1) {
+          cup.style.left = "33%";
+          cup.style.top = "45%";
+        }
+        if (i === 2) {
+          cup.style.left = "20%";
+          cup.style.top = "1%";
+        }
 
-    //     container.appendChild(cup);
-    //   }
-    // }
+        container.appendChild(cup);
+      }
+    }
 
     // Same idea with the plates.
-    // if (name === "Plate") {
-    //   for (var i=0; i<3; i++) {
-    //     let plate = document.createElement('img');
-    //     plate.src = imageUrl;
-    //     plate.classList.add("plate");
+    if (name === "plate") {
+      for (var i=0; i<3; i++) {
+        let plate = document.createElement('img');
+        plate.src = imageUrl;
+        plate.classList.add("plate");
 
-    //     if (i === 0) {
-    //       plate.style.left = "70%";
-    //       plate.style.top = "20%";
-    //     }
-    //     if (i === 1) {
-    //       plate.style.left = "55%";
-    //       plate.style.top = "60%";
-    //     }
-    //     if (i === 2) {
-    //       plate.style.left = "5%";
-    //       plate.style.top = "25%";
-    //     }
+        if (i === 0) {
+          plate.style.left = "80%";
+          plate.style.top = "10%";
+        }
+        if (i === 1) {
+          plate.style.left = "55%";
+          plate.style.top = "60%";
+        }
+        if (i === 2) {
+          plate.style.left = "5%";
+          plate.style.top = "10%";
+        }
 
-    //     container.appendChild(plate);
-    //   }
-    // }
+        container.appendChild(plate);
+      }
+    }
+
+    if (name === "food") {
+      for (var i=0; i<3; i++) {
+        let plate = document.createElement('img');
+        plate.src = imageUrl;
+        plate.classList.add("plate");
+
+        if (i === 0) {
+          plate.style.left = "80%";
+          plate.style.top = "50%";
+        }
+        if (i === 1) {
+          plate.style.left = "38%";
+          plate.style.top = "60%";
+        }
+        if (i === 2) {
+          plate.style.left = "5%";
+          plate.style.top = "50%";
+        }
+
+        container.appendChild(plate);
+      }
+    }
+
+    if (name === "dessert") {
+      for (var i=0; i<3; i++) {
+        let cake = document.createElement('img');
+        cake.src = imageUrl;
+        cake.classList.add("cake");
+
+        if (i === 0) {
+          cake.style.left = "83%";
+          cake.style.top = "16%";
+        }
+        if (i === 1) {
+          cake.style.left = "57%";
+          cake.style.top = "67%";
+        }
+        if (i === 2) {
+          cake.style.left = "7%";
+          cake.style.top = "17%";
+        }
+
+        container.appendChild(cake);
+      }
+    }
+    
+    if (name === "flowers") {
+      let flowers = document.createElement('img');
+      flowers.src = imageUrl;
+      flowers.classList.add("flowers");
+      container.appendChild(flowers);
+    }
+  
 
     // Same idea with the tablecloth.
     if (name === "tablecloth") {
