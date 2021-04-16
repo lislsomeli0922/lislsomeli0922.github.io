@@ -20,7 +20,6 @@ h1{
 .left{
     width: 400px;
     height: 200px;
-    margin-right: 80px;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -40,19 +39,49 @@ h1{
     border-radius: 20px;
     background-color: white;
     color: black; 
-    /*box-shadow: 10px 5px;*/
 }
 
 .pushleft{
     left: 10px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    color: black; 
 }
         
 .pushmoreleft{
     left: 20px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
 }
     	
 .pushmostleft{
     left: 30px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    box-shadow: 6px 4px;
 }
 
 p{
@@ -83,19 +112,46 @@ p{
     height: 200px;
     border-radius: 20px;
     background-color: white;
-    /*box-shadow: 10px 5px;*/
 }
 
 .pushright{
     left: 10px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
 }
 
 .pushmoreright{
     left: 20px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
 }
 
 .pushmostright{
     left: 30px;
+    padding: 8px;
+    margin: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 6px 4px;
 }
 
 img{
@@ -116,7 +172,7 @@ img{
 
 .show{
     position: absolute;
-    z-index: 999;
+    display: block;
 }	
        	
 #button{
@@ -144,110 +200,69 @@ img{
         cursor: pointer;
     }
     h1{
-        font-size: 50px;
+        font-size: 46px;
     }
     .container{
         display: flex;
-        padding: 10px;
         padding-bottom: 20px;
-        align-items: center;
-        justify-content: center;
+        /*align-items: center;
+        justify-content: center;*/
         flex-wrap: wrap;
-        flex-direction: row;
+        margin-left: 27%;
     }
     .left{
-        /*border-style: solid;*/
-        /*border-width: 2px;*/
-        width: 400px;
-        height: 500px;
-        border-radius: 20px;
-        margin-top: 0px;
-        /*background-color: white;*/
-        margin-right: 80px;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        position: relative;
+        width: 550px;
+        height: 230px;
     }
     .caption{
-        padding: 8px;
-        margin: 10px;
-        margin-top: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-style: solid;
-        border-width: 2px;
-        width: 400px;
-        height: 500px;
-        border-radius: 20px;
-        background-color: white;
+        width: 550px;
+        height: 230px;
     }
     .pushleft{
-        left: 10px;
+        width: 550px;
+        height: 230px;
     }
             
     .pushmoreleft{
-        left: 20px;
+        width: 550px;
+        height: 230px;
     }
             
     .pushmostleft{
-        left: 30px;
+        width: 550px;
+        height: 230px;
     }
     p{
         font-family: impact;
-        font-size: 48px;
+        font-size: 40px;
     }
     .right{
-        width: 400px;
-        height: 500px;
-        border-radius: 20px;
-        margin-top: 0px;
-        /*background-color: white;*/
-        margin-left: 80px;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        position: relative;
+        width: 550px;
+        height: 230px;
     }
     .box{
-        padding: 8px;
-        margin: 10px;
-        margin-top: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-style: solid;
-        border-width: 2px;
-        width: 400px;
-        height: 500px;
-        border-radius: 20px;
-        background-color: white;
-    }
-    img{
-        justify-content: center;
-        vertical-align: middle;
-
+        width: 550px;
+        height: 230px;
     }
     .pushright{
-        left: 10px;
+        width: 550px;
+        height: 230px;
     }
 
     .pushmoreright{
-        left: 20px;
+        width: 550px;
+        height: 230px;
     }
 
     .pushmostright{
-        left: 30px;
-    }
-    .container2{
-        
+        width: 550px;
+        height: 230px;
     }
     
     #button{
         background-color: black;
-        width: 140px;
-        height: 140px;
+        width: 130px;
+        height: 130px;
         border-radius: 50%;
         border: solid;
         border-color: white;
@@ -257,7 +272,7 @@ img{
         text-decoration: none;
         display: inline-block;
         font-size: 24px;
-        margin: 6px 200px;
+        margin: 15px 60px;
         cursor: pointer;
         font-family: helvetica;
         font-weight: lighter;

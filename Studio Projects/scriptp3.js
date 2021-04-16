@@ -14,15 +14,27 @@ const button2 = document.getElementById("button2");
 button2.addEventListener('click', showRandomBox)
 function showRandomBox() {
   let randomNumber = Math.floor(Math.random() * allboxes.length); 
-  allboxes[randomNumber].classList.add('show');
+  allboxes.forEach(function(box){
+  	box.style.display = "none";
+  })
+
+  allboxes[randomNumber].style.display = "block";
+  
 }
 
 const allcaptions = document.querySelectorAll(".caption");
 const button1 = document.getElementById("button1");
 button1.addEventListener('click', showRandomCaption)
 function showRandomCaption() {
-  let randomNumber = Math.floor(Math.random() * allcaptions.length); 
-  allcaptions[randomNumber].classList.add('show');
+  let randomNumber = Math.floor(Math.random() * allcaptions.length);
+  allcaptions.forEach(function(caption){
+  	caption.style.display = "none";
+  })
+
+
+  allcaptions[randomNumber].style.display = "block";
+  
+
 }
 
 
