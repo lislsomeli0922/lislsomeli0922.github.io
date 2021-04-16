@@ -40,6 +40,7 @@ h1{
     border-radius: 20px;
     background-color: white;
     color: black; 
+    /*box-shadow: 10px 5px;*/
 }
 
 .pushleft{
@@ -57,6 +58,7 @@ h1{
 p{
     font-family: impact;
     font-size: 32px;
+    color: black;
 }
 
 .right{
@@ -81,6 +83,7 @@ p{
     height: 200px;
     border-radius: 20px;
     background-color: white;
+    /*box-shadow: 10px 5px;*/
 }
 
 .pushright{

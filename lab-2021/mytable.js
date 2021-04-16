@@ -10,169 +10,218 @@
 
 // the next two lines are calling the Airtable API!!
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "keyBgXlPIhr1siQwo" }).base(
+var base = new Airtable({ apiKey: "keyVUyhxFy2non4mQ" }).base(
   "appabB6jobRYq7S80"
 );
 
 // create an empty array for all of your items to go into
-let allItems = [];
+// let allItems = [];
 
-// inside the () after base put the name of YOUR spreadsheet
+// // inside the () after base put the name of YOUR spreadsheet
+// base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextPage) {
+//   tableItems.forEach(function(item) {
+//     // push each item received into the allItems array on line 16
+//     allItems.push(item);
+//   });
+
+
+//   // if there is another page of items, get those too
+//   fetchNextPage();
+
+// }, function done(err) {
+//   if (err) { console.error(err); return; }
+
+//   // all items received, no errors!!
+//   // console log the allItems array, you should see all of your data in there now.
+//   console.log(allItems);
+
+//   // now, call a new function to do stuff with your data and pass the allItems array into it
+//   setTable(allItems);
+// });
+
+
+// function setTable(allItems) {
+//   // make a container div and append it to the body
+//   // this way we can append all of our items to a div which we can style later
+//   let container = document.createElement("div");
+//   container.classList.add("container");
+//   document.body.appendChild(container);
+
+//   // run a forEach loop on your array, with each item
+//   // then make a new HTML element and position it somewhere on the page 
+//   allItems.forEach(function(item) {
+//     // store the name of the item (from your spreadsheet) into a variable
+//     let name = item.fields.name;
+//     // store the image for the item into a variable
+//     let imageUrl = item.fields.attachments[0].url;
+
+
+
+//     // let itemImage = document.createElement('img');
+//     // itemImage.src = imageUrl;
+//     // itemImage.classList.add(item.fields.kind_of_item);
+//     // container.appendChild(itemImage);
+
+//     // the following code is for making multiple cups and plates etc out of just one Airtable record and then positioning them in specific spots on the table. these are the names I used in my airtable, yours will be different!!
+//     // here i want to do different things with different items
+//     // so if the item is a Cup, I want to add a class name of cup, and put each one in a different position on the page.
+//     // dont forget, some of the styling for my page here in JS and some is in my CSS file, for example I know that my .cup class has position: absolute set in CSS, which means that style.left and style.top will work here in the JS.
+    
+//     if (name === "cup") {
+//       for (var i=0; i<3; i++) {
+//         let cup = document.createElement('img');
+//         cup.src = imageUrl;
+//         cup.classList.add("cup");
+
+//         if (i === 0) {
+//           cup.style.left = "72%";
+//         }
+//         if (i === 1) {
+//           cup.style.left = "33%";
+//           cup.style.top = "45%";
+//         }
+//         if (i === 2) {
+//           cup.style.left = "20%";
+//           cup.style.top = "1%";
+//         }
+
+//         container.appendChild(cup);
+//       }
+//     }
+
+//     // Same idea with the plates.
+//     if (name === "plate") {
+//       for (var i=0; i<3; i++) {
+//         let plate = document.createElement('img');
+//         plate.src = imageUrl;
+//         plate.classList.add("plate");
+
+//         if (i === 0) {
+//           plate.style.left = "80%";
+//           plate.style.top = "10%";
+//         }
+//         if (i === 1) {
+//           plate.style.left = "55%";
+//           plate.style.top = "60%";
+//         }
+//         if (i === 2) {
+//           plate.style.left = "5%";
+//           plate.style.top = "10%";
+//         }
+
+//         container.appendChild(plate);
+//       }
+//     }
+
+//     if (name === "food") {
+//       for (var i=0; i<3; i++) {
+//         let plate = document.createElement('img');
+//         plate.src = imageUrl;
+//         plate.classList.add("plate");
+
+//         if (i === 0) {
+//           plate.style.left = "80%";
+//           plate.style.top = "50%";
+//         }
+//         if (i === 1) {
+//           plate.style.left = "38%";
+//           plate.style.top = "60%";
+//         }
+//         if (i === 2) {
+//           plate.style.left = "5%";
+//           plate.style.top = "50%";
+//         }
+
+//         container.appendChild(plate);
+//       }
+//     }
+
+//     if (name === "dessert") {
+//       for (var i=0; i<3; i++) {
+//         let cake = document.createElement('img');
+//         cake.src = imageUrl;
+//         cake.classList.add("cake");
+
+//         if (i === 0) {
+//           cake.style.left = "83%";
+//           cake.style.top = "16%";
+//         }
+//         if (i === 1) {
+//           cake.style.left = "57%";
+//           cake.style.top = "67%";
+//         }
+//         if (i === 2) {
+//           cake.style.left = "7%";
+//           cake.style.top = "17%";
+//         }
+
+//         container.appendChild(cake);
+//       }
+//     }
+    
+//     if (name === "flowers") {
+//       let flowers = document.createElement('img');
+//       flowers.src = imageUrl;
+//       flowers.classList.add("flowers");
+//       container.appendChild(flowers);
+//     }
+  
+
+//     // Same idea with the tablecloth.
+//     if (name === "tablecloth") {
+//       let tablecloth = document.createElement('img');
+//       tablecloth.src = imageUrl;
+//       tablecloth.classList.add("tablecloth");
+//       container.appendChild(tablecloth);
+//     }
+//   })
+// }
+let allItems = [];
+let allDessertItems = [];
+
 base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextPage) {
   tableItems.forEach(function(item) {
-    // push each item received into the allItems array on line 16
     allItems.push(item);
   });
 
-
-  // if there is another page of items, get those too
   fetchNextPage();
 
 }, function done(err) {
   if (err) { console.error(err); return; }
 
-  // all items received, no errors!!
-  // console log the allItems array, you should see all of your data in there now.
-  console.log(allItems);
-
-  // now, call a new function to do stuff with your data and pass the allItems array into it
   setTable(allItems);
 });
 
+let container = document.createElement("div");
+container.classList.add("container");
+document.body.appendChild(container);
 
 function setTable(allItems) {
-  // make a container div and append it to the body
-  // this way we can append all of our items to a div which we can style later
-  let container = document.createElement("div");
-  container.classList.add("container");
-  document.body.appendChild(container);
-
-  // run a forEach loop on your array, with each item
-  // then make a new HTML element and position it somewhere on the page 
   allItems.forEach(function(item) {
-    // store the name of the item (from your spreadsheet) into a variable
-    let name = item.fields.name;
-    // store the image for the item into a variable
-    let imageUrl = item.fields.attachments[0].url;
+    let imageUrl = item.fields.images[0].url;
+    let image = document.createElement('img');
+    image.src = imageUrl;
+    image.classList.add(item.fields.class_name);
+    container.appendChild(image);
 
-
-
-    // let itemImage = document.createElement('img');
-    // itemImage.src = imageUrl;
-    // itemImage.classList.add(item.fields.kind_of_item);
-    // container.appendChild(itemImage);
-
-    // the following code is for making multiple cups and plates etc out of just one Airtable record and then positioning them in specific spots on the table. these are the names I used in my airtable, yours will be different!!
-    // here i want to do different things with different items
-    // so if the item is a Cup, I want to add a class name of cup, and put each one in a different position on the page.
-    // dont forget, some of the styling for my page here in JS and some is in my CSS file, for example I know that my .cup class has position: absolute set in CSS, which means that style.left and style.top will work here in the JS.
-    
-    if (name === "cup") {
-      for (var i=0; i<3; i++) {
-        let cup = document.createElement('img');
-        cup.src = imageUrl;
-        cup.classList.add("cup");
-
-        if (i === 0) {
-          cup.style.left = "72%";
-        }
-        if (i === 1) {
-          cup.style.left = "33%";
-          cup.style.top = "45%";
-        }
-        if (i === 2) {
-          cup.style.left = "20%";
-          cup.style.top = "1%";
-        }
-
-        container.appendChild(cup);
-      }
-    }
-
-    // Same idea with the plates.
-    if (name === "plate") {
-      for (var i=0; i<3; i++) {
-        let plate = document.createElement('img');
-        plate.src = imageUrl;
-        plate.classList.add("plate");
-
-        if (i === 0) {
-          plate.style.left = "80%";
-          plate.style.top = "10%";
-        }
-        if (i === 1) {
-          plate.style.left = "55%";
-          plate.style.top = "60%";
-        }
-        if (i === 2) {
-          plate.style.left = "5%";
-          plate.style.top = "10%";
-        }
-
-        container.appendChild(plate);
-      }
-    }
-
-    if (name === "food") {
-      for (var i=0; i<3; i++) {
-        let plate = document.createElement('img');
-        plate.src = imageUrl;
-        plate.classList.add("plate");
-
-        if (i === 0) {
-          plate.style.left = "80%";
-          plate.style.top = "50%";
-        }
-        if (i === 1) {
-          plate.style.left = "38%";
-          plate.style.top = "60%";
-        }
-        if (i === 2) {
-          plate.style.left = "5%";
-          plate.style.top = "50%";
-        }
-
-        container.appendChild(plate);
-      }
-    }
-
-    if (name === "dessert") {
-      for (var i=0; i<3; i++) {
-        let cake = document.createElement('img');
-        cake.src = imageUrl;
-        cake.classList.add("cake");
-
-        if (i === 0) {
-          cake.style.left = "83%";
-          cake.style.top = "16%";
-        }
-        if (i === 1) {
-          cake.style.left = "57%";
-          cake.style.top = "67%";
-        }
-        if (i === 2) {
-          cake.style.left = "7%";
-          cake.style.top = "17%";
-        }
-
-        container.appendChild(cake);
-      }
-    }
-    
-    if (name === "flowers") {
-      let flowers = document.createElement('img');
-      flowers.src = imageUrl;
-      flowers.classList.add("flowers");
-      container.appendChild(flowers);
-    }
-  
-
-    // Same idea with the tablecloth.
-    if (name === "tablecloth") {
-      let tablecloth = document.createElement('img');
-      tablecloth.src = imageUrl;
-      tablecloth.classList.add("tablecloth");
-      container.appendChild(tablecloth);
+    if (item.fields.type === "dessert") {
+      allDessertItems.push(item);
     }
   })
 }
+
+let showDessertButton = document.getElementById("show-dessert");
+showDessertButton.addEventListener('click', showAllTheDessert);
+
+function showAllTheDessert() {
+  allDessertItems.forEach(function(dessertItem) {
+    let dessert = document.createElement('img');
+    dessert.src = dessertItem.fields.images[0].url;
+    dessert.classList.add(dessertItem.fields.class_name);
+    dessert.style.display = "block";
+    container.appendChild(dessert);
+  })
+}
+
+
+

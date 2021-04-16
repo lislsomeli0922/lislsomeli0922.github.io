@@ -1,7 +1,23 @@
 body {
   background-color: snow;
   width: 100%;
-
+}
+.top{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  font-family: courier;
+  font-weight: lighter;
+}
+#show-dessert{
+  text-decoration: none;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  border: dotted;
+  color: red;
 }
 .container {
   position: relative;
@@ -9,7 +25,7 @@ body {
   height: 400px;
   width: 90%;
 }
-.tablecloth, .cup, .plate, .flowers, .cake{
+.tablecloth, .cup, .cup2, .plate, .plate2, .pasta, .pasta2, .roses/*, .dessert*/{
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +35,7 @@ body {
 .tablecloth {
   z-index: 8;
 }
-.cup, .plate, .flowers, .cake {
+.cup, .cup2, .plate, .plate2, .pasta, .pasta2, .roses {
   z-index: 10;
 }
 
@@ -31,21 +47,61 @@ body {
 .cup {
   width: 80px;
   height: 120px;
+  top: 10%;
+  left: 20%;
 }
-
-.plate {
+.cup2{
+  width: 80px;
+  height: 120px;
+  top: 50%;
+  left: 70%;
+}
+.plate{
   height: 150px;
   width: 150px;
+  top: 55%;
+  left: 2%;
 }
-
-.flowers{
+.plate2{
+  height: 150px;
+  width: 150px;
+  top: 5%;
+  left: 85%;
+}
+.pasta{
+  height: 150px;
+  width: 150px;
+  top: 15%;
+  left: 3%;
+}
+.pasta2{
+  height: 150px;
+  width: 150px;
+  top: 50%;
+  left: 85%;
+}
+.roses{
   height: 150px;
   width: 200px;
   top: 15%;
   left: 43%;
 }
 
-.cake{
+.dessert{
+  display: none;
+  position: absolute;
   height: 80px;
   width: 110px;
+  left: 40px;
+  top: 60%;
+  z-index: 10;
+}
+.dessert2{
+  display: none;
+  position: absolute;
+  height: 80px;
+  width: 110px;
+  left: 86%;
+  top: 50px;
+  z-index: 10;
 }
