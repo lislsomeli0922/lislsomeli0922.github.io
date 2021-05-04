@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>my constellation</title>
+	<style>
+		body{
+			background-image: url('starrynight.png');
+			background-repeat: none;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		img{
+			width: 60px;
+			height: 60px;
+		}
+
+		.star{
+			display: block;
+			z-index: -1;
+			position: fixed;
+		}
+
+		.star.hide{
+			display: none;
+		}
+
+		button{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 100;
+			left: 52%;
+			position: fixed;
+			bottom: 0;
+			text-decoration: none;
+			width: 60px;
+			height: 30px;
+			text-align: center;
+			border-radius: 10%;
+			border: none;
+		}
+
+		main{
+			z-index: 100;
+			left: 48%;
+			bottom: 0;
+			width: 60px;
+			position: fixed;
+		}
+
+		section{
+			display: none;
+			position: fixed;
+			bottom: 0;
+		}
+
+		.clear{
+			z-index: 100;
+			bottom: 0px;
+			position: absolute;
+		}
+
+		/*#button3{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 14px;
+			cursor: pointer;
+			z-index: 21;
+		}*/
+		
+		.popup {
+		  position: fixed;
+		  bottom: 0;
+		  left: 40%;
+		  display: inline-block;
+		  cursor: pointer;
+		  margin: 0px;
+		  height: 30px;
+		  width: 60px;
+		  border-radius: 10%;
+		  text-align: center;
+		}
+
+		.popup .popuptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 8px 0;
+		  position: absolute;
+		  z-index: 21;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -120px;
+		}
+		.popup{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 21;
+		}
+
+		.popup .popuptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -15px;
+		  border-width: 10px;
+		  border-style: solid;
+		  border-color: white transparent transparent transparent;
+		}
+
+		.popup .show {
+		  visibility: visible;
+		  -webkit-animation: fadeIn 1s;
+		  animation: fadeIn 1s;
+		  font-size: 25px;
+		  color: black;
+		  background-color: white;
+		  font-family: times new roman;
+		  width: 250px;
+
+		}
+
+		#myCanvas{
+			height: 100vh;
+			width: 100vw;
+			border-style: solid;
+			border-color: white;
+			position: fixed;
+			display: block;
+			z-index: 200;
+		}
+
+		@media screen and (min-width: 768px) {
+
+			.popup{
+				left: 47%;
+			}
+
+			main{
+				left: 52%;
+			}
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="popup"> 
+	about 
+	<span class="popuptext" id="myPopup">connect the stars by using your mouse to draw and make your own constellation. you can also press the "s" button to change the starry night. see how many you can make and feel free share it with your friends :) designed by lissette lomeli</span>
+	</div>
+	
+
+	<div class="stars">
+
+		<div class="star">
+			<img src="star/stars.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 2.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 3.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 4.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 5.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 6.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 2.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 3.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 4.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 5.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 6.jpg">
+		</div>
+
+	</div>
+
+	<canvas></canvas>
+	  <main>
+	    <section class="colors">
+	      <input type="text" class="color-picker" value="white" />
+	    </section>
+	    <section class="thickness">
+	      <input type="number" class="stroke-weight" value="4" />
+	    </section>
+	    <button class="clear">clear</button>
+	  </main>
+
+     <!-- <canvas id="myCanvas"></canvas>
+       
+
+    <button class="button2"> clear </button>
+	<button id="button3"> draw </button> -->
+
+	<script src="p4script.js" type="text/javascript" defer></script>
+</body>
+</html>
