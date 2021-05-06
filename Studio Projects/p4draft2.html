@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>my constellation</title>
+	<style>
+		body{
+			background-image: url('starrynight.png');
+			background-repeat: none;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		img{
+			width: 60px;
+			height: 60px;
+		}
+
+		.star{
+			display: block;
+			z-index: -1;
+			position: fixed;
+		}
+
+		.star.hide{
+			display: none;
+		}
+
+		button{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 100;
+			left: 70%;
+			position: fixed;
+			bottom: 0;
+			text-decoration: none;
+			width: 60px;
+			height: 30px;
+			text-align: center;
+			border-radius: 10%;
+			border: none;
+		}
+
+		#dtool{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 100;
+			left: 45.6%;
+			position: fixed;
+			bottom: 0;
+			text-decoration: none;
+			width: 80px;
+			height: 30px;
+			text-align: center;
+			border-radius: 10%;
+			border: none;
+		}
+
+		main{
+			z-index: 100;
+			left: 57%;
+			bottom: 0;
+			width: 60px;
+			position: fixed;
+		}
+
+		section{
+			display: none;
+			position: fixed;
+			bottom: 0;
+		}
+
+		.clear{
+			z-index: 100;
+			bottom: 0px;
+			position: absolute;
+		}
+		
+		.popup {
+		  position: fixed;
+		  bottom: 0;
+		  left: 30%;
+		  display: inline-block;
+		  cursor: pointer;
+		  margin: 0px;
+		  height: 30px;
+		  width: 60px;
+		  border-radius: 10%;
+		  text-align: center;
+		  line-height: 28px;
+		}
+
+		.popup .popuptext {
+		  visibility: hidden;
+		  width: 160px;
+		  background-color: #555;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 8px 0;
+		  position: absolute;
+		  z-index: 21;
+		  bottom: 125%;
+		  left: 50%;
+		  margin-left: -120px;
+		}
+		.popup{
+			background-color: blue;
+			color: white;
+			font-family: times new roman;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 21;
+		}
+
+		.popup .popuptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -15px;
+		  border-width: 10px;
+		  border-style: solid;
+		  border-color: white transparent transparent transparent;
+		}
+
+		.popup .show {
+		  visibility: visible;
+		  -webkit-animation: fadeIn 1s;
+		  animation: fadeIn 1s;
+		  font-size: 25px;
+		  color: black;
+		  background-color: white;
+		  font-family: times new roman;
+		  width: 250px;
+
+		}
+
+		#container { position: relative; width: 100%; height: 100%}
+		#imageView { border: none; position: fixed; }
+		#imageTemp { position: absolute; top: 1px; left: 1px;}
+
+
+
+		@media screen and (min-width: 768px) {
+
+			.popup{
+				left: 42%;
+			}
+
+			#dtool{
+				left: 47%;
+			}
+
+			main{
+				left: 50.5%;
+				background-color: blue;
+				color: white;
+				border-radius: 10%;
+			}
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="popup"> 
+	about 
+	<span class="popuptext" id="myPopup">connect the stars by using your cursor to draw and make your own constellations. you can also press the "s" button to change the starry night. see how many you can make and add some details with the pencil tool:) designed by lissette lomeli</span>
+	</div>
+	
+
+	<div class="stars">
+
+		<div class="star">
+			<img src="star/stars.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 2.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 3.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 4.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 5.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 6.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 2.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 3.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 4.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 5.jpg">
+		</div>
+
+		<div class="star">
+			<img src="star/stars 6.jpg">
+		</div>
+
+	</div>
+
+
+	  <main>
+	    <button class="clear">clear</button>
+	  </main>
+
+	<p><label><select id="dtool">
+        <option value="line">line</option>
+        <option value="pencil">pencil</option>
+    </select></label></p>
+
+    <div id="container">
+      <canvas id="imageView">
+      </canvas>
+    </div>
+
+	<script src="p4script2.js" type="text/javascript" defer></script>
+</body>
+</html>

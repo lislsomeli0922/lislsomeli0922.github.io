@@ -36,20 +36,6 @@ function myFunctionTwo(){
   	popup.classList.toggle("show");
 }
 
-// const canvas = document.querySelector('canvas');
-// const ctx = canvas.getContext('2d');
-// const button3 = document.getElementById(".button3");
-// let isDrawing = false;
-
-// button3.addEventListener('click', drawLine);
-// canvas.addEventListener('mousedown', start);
-// canvas.addEventListener('mousemove', draw);
-// canvas.addEventListener('mouseup', stop);
-
-// function drawLine(){
-
-// }
-
 const clearButton = document.querySelector('.clear');
 const stroke_weight = document.querySelector('.stroke-weight');
 const color_picker = document.querySelector('.color-picker');
@@ -96,3 +82,4 @@ function resizeCanvas () {
   canvas.height = window.innerHeight;
 }
 resizeCanvas();
+
