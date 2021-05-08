@@ -6,7 +6,7 @@
 			font-size: 18px;
 		}
 		p{
-			font-family: helvetica;
+			font-family: courier new;
 			font-weight: lighter;
 		}
 		span{
@@ -19,7 +19,7 @@
 		}
 		span:hover{
 			 color: black;
-			 font-family: helvetica;
+			 font-family: courier new;
 			 font-weight: bolder;
 			 transform:scale(3);
 			 transition: all 0.5s linear;
@@ -30,32 +30,35 @@
 		h1{
 			text-align: center;
 			font-family: helvetica;
-			font-weight: bolder;
+			font-weight: lighter;
 		}
 		h2{
 			text-align: center;
 			font-family: helvetica;
-			font-weight: bolder;
+			font-weight: lighter;
 		}
 		.credit{
 			font-family: helvetica;
 			font-weight: lighter;
 			font-size: 12px;
 		}
-		.button{
-			 border: dashed;
-			 color: white;
-			 padding: 1px 3px;
-			 text-align: center;
-			 text-decoration: none;
-			 display: inline-block;
-			 margin: 4px 2px;
-			 cursor: pointer;
-			 float: right;
-		}
+		
+		/*button{
+			text-decoration: none;
+			background-color: white;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			color: black;
+			font-size: 50px;
+			left: 50%;
+			top: 20%;
+			position: relative;
+		}*/
 		.flowers{
 			text-align: center;
 			font-size: 30px;
+			color: white;
 		}
 		@media screen and (min-width: 768px){
 			span{
@@ -68,7 +71,7 @@
 			}
 			span:hover{
 			 color: black;
-			 font-family: helvetica;
+			 font-family: courier new;
 			 font-weight: bolder;
 			 transform:scale(3);
 			 transition: all 0.5s linear;
